@@ -7,7 +7,8 @@ import { Button,Dialog,
   DialogContent,
   DialogContentText,
   DialogTitle } from '@material-ui/core'; 
-import { HeroForm } from '../../components/HeroForm';
+import { HeroForm } from '../HeroForm';
+import { FlipCard } from '../FlipCard';
 
 const columns: GridColDef[] = [
     { field: 'id', headerName: 'ID', width: 90 },
@@ -37,7 +38,7 @@ const columns: GridColDef[] = [
     },
   ];
   
-export const DataTable =  () => {
+export const ShowCards =  () => {
   
   let { heroData, getData } = useGetData();
   let [open, setOpen] = useState(false);
@@ -59,6 +60,7 @@ export const DataTable =  () => {
     return (
         <div style={{ height: 400, width: '100%' }}>
           <h2>Heros In Inventory</h2>
+          <FlipCard />
           <DataGrid 
             rows={heroData} 
             columns={columns} 

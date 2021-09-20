@@ -26,7 +26,7 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import clsx from 'clsx';
 import { RouteComponentProps, withRouter, Switch, Route } from 'react-router-dom';
-import { DataTable, HeroForm } from '..'; 
+import { ShowCards, HeroForm } from '..'; 
 
 const drawerWidth = 240;
 
@@ -206,7 +206,7 @@ export const CardCollection = withRouter(( props:CardProps ) => {
         >
           <div className={classes.drawerHeader} />
           <h1>Your Heroes</h1>
-          <DataTable />
+          <ShowCards />
         </main>
       </div>
       )
