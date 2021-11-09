@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch, useSelector, useStore } from 'react-redux';
 import { useForm } from 'react-hook-form';
-import { chooseHeroName, chooseRealName, chooseComics, choosePower } from '../../redux/slices/rootSlice';
+import { chooseHeroName, chooseRealName, chooseComics, choosePower, chooseDescription } from '../../redux/slices/rootSlice';
 import { Input } from '../sharedComponents/Input/Input';
 import { Button } from '@material-ui/core';
 
@@ -17,6 +17,7 @@ interface HeroFormProps {
 interface HeroState {
     hero_name: string;
     real_name: string;
+    description: string;
     comics_appeared_in: string;
     super_power: string;
 }
@@ -28,6 +29,7 @@ export const HeroForm = (props:HeroFormProps) => {
     const store = useStore()
     const hero_name = useSelector<HeroState>(state => state.hero_name)
     const real_name = useSelector<HeroState>(state => state.real_name)
+    const description = useSelector<HeroState>(state => state.description)
     const comics_appeared_in= useSelector<HeroState>(state => state.comics_appeared_in)
     const super_power = useSelector<HeroState>(state => state.super_power)
     const { register, handleSubmit } = useForm({ })
@@ -43,6 +45,7 @@ export const HeroForm = (props:HeroFormProps) => {
         } else {
             dispatch(chooseHeroName(data.hero_name))
             dispatch(chooseRealName(data.real_name))
+            dispatch(chooseDescription(data.description))
             dispatch(chooseComics(data.comics_appeared_in))
             dispatch(choosePower(data.super_power))
             await server_calls.create(store.getState())

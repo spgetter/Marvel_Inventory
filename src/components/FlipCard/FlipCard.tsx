@@ -1,6 +1,6 @@
 import { makeStyles } from '@material-ui/core';
 import Button from '@material-ui/core/Button';
-import hero1_image from '../../assets/images/legos/lego_cpt_america.png';
+import hero1_image from '../../assets/images/legos/lego_iron_man.png';
 import hero2_image from '../../assets/images/legos/lego_spider_man.png';
 import hero3_image from '../../assets/images/legos/lego_cpt_marvel.png';
 import backArrow_image from '../../assets/images/icons/243653_square_back_arrow_left_icon.png';

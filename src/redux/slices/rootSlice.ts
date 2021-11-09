@@ -13,10 +13,11 @@ const rootSlice = createSlice({
         chooseHeroName: (state, action) => { state.hero_name = action.payload},
         chooseRealName: (state, action) => { state.real_name = action.payload},
         chooseComics: (state, action) => { state.comics_appeared_in = action.payload},
-        choosePower: (state, action) => { state.super_power = action.payload}
+        choosePower: (state, action) => { state.super_power = action.payload},
+        chooseDescription: (state, action) => { state.description = action.payload}
     }
 })
 
 // Export Reducer
 export const reducer = rootSlice.reducer;
-export const { chooseHeroName, chooseRealName, chooseComics, choosePower  } = rootSlice.actions;
+export const { chooseHeroName, chooseRealName, chooseComics, choosePower, chooseDescription  } = rootSlice.actions;

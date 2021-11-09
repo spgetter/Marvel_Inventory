@@ -36,6 +36,12 @@ const columns: GridColDef[] = [
       width: 160,
       editable: true
     },
+    {
+      field: 'description',
+      headerName: 'DESCRIPTION',
+      width: 250,
+      editable: true
+    },
   ];
   
 export const ShowCards =  () => {
